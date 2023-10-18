@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Photo Gallery</title>
+  
+</head>
+<style>
+    *{
+        background-color:burlywood;
+        
+    }
+    .gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+  
+}
+
+.image-box {
+  position: relative;
+}
+
+.image-box:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0.15, 0.15, 0, 0.5);
+  z-index: 2.5;
+  transition: all 0.3s ease-in-out;
+}
+
+.image-box:hover img {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease-in-out;
+}
+</style>
+<body>
+  <h1 style="font-style: oblique; font-family:fantasy "><span style="color: blueviolet;">GALL</span>ERY</h1>
+  
+  <div class="gallery-container">
+
+    <div class="image-box">
+      <img src="C:\Users\Selvamouriyam\Pictures\Saved Pictures\5549705.jpg" alt="Img-1">
+    </div>
+    <div class="image-box">
+      <img src="C:\Users\Selvamouriyam\Pictures\Saved Pictures\istockphoto-517188688-612x612.jpg" alt="Img-2">
+    </div>
+    <div class="image-box">
+      <img src="C:\Users\Selvamouriyam\Pictures\Saved Pictures\istockphoto-1317323736-612x612.jpg" alt="Img-3">
+    </div>
+    <div class="image-box">
+        <img src="C:\Users\Selvamouriyam\Pictures\Saved Pictures\photo-1618588507085-c79565432917.jpg" alt="Img-4">
+    </div>
+    <div class="image-box">
+        <img src="C:\Users\Selvamouriyam\Pictures\Saved Pictures\download.jpg" alt="Img-5">
+    </div>
+    <div class="image-box">
+        <img src="C:\Users\Selvamouriyam\Pictures\Saved Pictures\360_F_547978128_vqEEUYBr1vcAwfRAqReZXTYtyawpgLcC.jpg" alt="Img-6">
+    </div>
+    <div class="image-box">
+        <img src="C:\Users\Selvamouriyam\Pictures\Saved Pictures\229-westerlund-21.jpg" alt="Img-7">
+    </div>
+    <div class="image-box">
+        <img src="C:\Users\Selvamouriyam\Pictures\Saved Pictures\glowing-spaceship-orbits-planet-starry-galaxy-generated-by-ai_188544-9655.avif" alt="Img-8">
+    </div>
+
+
+  </div> 
+</body>
+</html>
