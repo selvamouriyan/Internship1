@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Business Website</title>
+</head>
+<style>
+    html{
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #4A4A4A;
+
+}
+header{
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    width: 90%;
+    height: 4.5rem;
+    z-index: 7;
+}
+
+header #logo{
+    padding-left: 2.5rem;
+    padding-top: 2.5rem;
+}
+
+header #logo img{
+    display: block;
+    width: 50%;
+    height: auto;
+}
+header nav{
+    padding-right: 1rem;
+    font-size: 1.3rem;
+    width: 50%;
+}
+nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    height: 100%;
+    align-items: center;
+}
+nav ul li{
+    display: inline-block;
+    color: #4A4A4A;
+    cursor: pointer;
+    padding: 1.9rem 1rem;
+}
+nav ul li:hover{
+    background-color: #f0f0f0;
+    transition: all .5s;
+}
+main{
+    position: relative;
+    top: 5.5rem;
+}
+main #home{
+    display: flex;
+    justify-content: space-around;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 4rem 0;
+}
+#home-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.6rem;
+    width: 50%;
+    align-items: center;
+    color: white;
+}
+#home-info h1{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 0;
+    line-height: 1.5;
+    background-color: #353935;
+    font-weight: 300;
+    text-shadow: 1px 1px blue;
+    margin-top: 0;
+    
+}
+#home-info h3{
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 300;
+}
+#home-bg img{
+    display: block;
+    height: 100px;
+}
+#download-app{
+    display: flex;
+    width: 70%;
+    align-items: center;
+}
+#download-app img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+#features{
+    color: #301934;
+    background-color: beige;
+}
+#features h2{
+    font-size: 2rem;
+    padding-left: 2rem;
+    width: 10%;
+    border-bottom: 4px solid #36454f;
+    border-radius: 20%;
+    margin-top: 0;
+    padding-top: 1rem;
+}
+#feature-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.feature-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+}
+
+.feature-block img{
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 64px;
+}
+
+.feature-block h3{
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+.feature-block p{
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+#about-us{
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 0.25rem;
+}
+
+#about-us> h2{
+    font-size: 2rem;
+    padding-left: 2rem;
+    width: 10%;
+    border-bottom: 4px solid #EDEADE;
+    border-radius: 20%;
+    margin-bottom: 0;
+}
+
+#about-blocks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+#about-blocks .block{
+    width: 25%;
+    text-align: left;
+}
+#about-blocks .block h2{
+    font-size: 3rem;
+    font-weight: 500;
+    text-decoration: underline;
+}
+#about-blocks #info{
+    border: 1px solid white;
+    padding: 0 1rem;
+    width: 45%;
+}
+
+.block h3{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.block p{
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+
+#contact-us{
+    
+    background-repeat: no-repeat;
+    padding-bottom: 3rem;
+    padding-top: 1rem;
+
+}
+
+#contact-us> h2{
+    font-size: 2rem;
+    padding-left: 2rem;
+    width: 15%;
+    border-bottom: 4px solid #EDEADE;
+    border-radius: 20%;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+#contact-us #block-list{
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+}
+#block-list div{
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.contact-block> h2{
+    font-size: 3rem;
+    text-align: left;
+    line-height: 1.5;
+    color: #353935;
+    text-transform: capitalize;
+}
+
+.contact-block label{
+    font-size: 1.5rem;
+    color: #301934;
+    width: 50%;
+}
+
+#block-list form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 3rem;
+    width: 50%;
+}
+
+
+
+.contact-block input{
+    border-bottom: 1px solid blue;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    font-size: 1.4rem;
+    width: 100%;
+}
+
+textarea{
+    border-bottom: 1px solid blue;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    resize: none;
+}
+
+footer{
+    height: 2rem;
+    padding: 1.5rem;
+    background-color: purple;
+    color: white;
+    font-size: 1.3rem;
+}
+
+footer p{
+    margin-left: 200;
+    justify-content:end;
+    align-items: end;
+}
+</style>
+<body>
+  <div id="container">
+    <header>
+      <div id="logo">
+        <a href="#"><img src="C:\Users\Selvamouriyam\Pictures\Saved Pictures\download.jpg"></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about-us">About Us</a></li>
+          <li><a href="#contact-us">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div id="home">
+        <div id="home-info">
+          <h1>Discover New <br>Possibilities</h1>
+          <h3>Try it yourself. Download Our App Now.</h3>
+          <div id="download-app">
+            <a><img src="C:\Users\Selvamouriyam\Pictures\Saved Pictures\5549705.jpg"></a>
+            <a><img src="C:\Users\Selvamouriyam\Pictures\Saved Pictures\5549705.jpg"></a>
+          </div>
+        </div>
+        <div id="home-bg">
+          <img src="C:\Users\Selvamouriyam\Pictures\Saved Pictures\5549705.jpg">
+        </div>
+      </div>
+      <div id="features">
+        <h2>Features</h2>
+        <div id="feature-list">
+          <div class="feature-block">
+            <img src="C:\Users\Selvamouriyam\Pictures\Saved Pictures\5549705.jpg">
+            <h3>24/7 Support</h3>
+            <p>Our mobile app comes with 24/7 support to ensure that people using our app will 
+                not face any difficulties while using it.</p>
+          </div>
+
+          <div class="feature-block">
+            <img src="C:\Users\Selvamouriyam\Pictures\Saved Pictures\5549705.jpg">
+            <h3>High Performance</h3>
+            <p>Our mobile app is designed to deliver high performance and fast speeds, with amazing user interface.
+                
+            </p>
+          </div>
+
+          <div class="feature-block">
+            <img src="C:\Users\Selvamouriyam\Pictures\Saved Pictures\5549705.jpg">
+            <h3>100% Secure</h3>
+            <p>Your privacy and security are our top priority. You can use our
+              app with confidence, knowing that your information is 100% secure.</p>
+          </div>
+
+
+        </div>
+      </div>
+      <div id="about-us">
+        <h2>About Us</h2>
+        <div id="about-blocks">
+          <div class="block">
+            <h2>Our Story</h2>
+          </div>
+
+          <div class="block" id="info">
+            <h3>Its better to deliver more than their expectations.</h3>
+            <p>At our company, we strive to exceed your expectations in every way possible. </p>
+          </div>
+
+        </div>
+      </div>
+      <div id="contact-us">
+        <h2>Contact Us</h2>
+        <div id="block-list">
+          <div class="contact-block">
+            <h2>Reach out to us </h2>
+          </div>
+          <form class="contact-block">
+            <label for="first-name">First Name:<br>
+              <input type="text" id="first-name">
+            </label>
+            <label for="last-name">Last Name:<br>
+              <input type="text" id="last-name">
+            </label>
+            <label for="email" id="email-label">Email:<br>
+              <input type="email" id="email">
+            </label>
+            <label for="text-area" id="textarea-label">Leave us a message:<br>
+              <textarea id="text-area" rows="4" cols="55"></textarea>
+            </label>
+          </form>
+        </div>
+      </div>
+
+      <footer>
+        <p>Copyright 2023</p>
+      </footer>
+    </main>
+
+
+  </div>
+</body>
+
+</html>
